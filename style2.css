@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Zapewnia, że elementy będą łamać się na nową linię */
+  width: calc(16 * 16px + 15 * 2px);
+  height: calc(16 * 16px + 15 * 2px);
+  border: 1px solid red;
+  gap: 2px;
+}
+
+.columns {
+  width: 16px;
+  height: 16px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}

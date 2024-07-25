@@ -1,0 +1,19 @@
+* {
+  background: #000000d7;
+}
+
+.divCol {
+  width: 4px;
+  height: 4px;
+  border: 1px solid white;
+  padding: 2px;
+}
+
+.container {
+  display: flex;
+}
+
+.rowsCol {
+  display: flex;
+  flex-direction: column;
+}
