@@ -1,7 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
+  background: rgba(0, 0, 0, 0.322);
 }
 
 #app {
@@ -14,25 +21,17 @@ body {
 }
 
 .container {
+  border: 1px solid black;
   display: flex;
   align-items: center;
   flex-wrap: wrap; /* Zapewnia, że elementy będą łamać się na nową linię */
-  max-width: calc(48 * 16px + 15 * 2px);
-  max-height: calc(48 * 16px + 15 * 2px);
-  border: 1px solid red;
-  gap: 2px;
-  padding: 4px;
 }
 
 .columns {
-  width: 48px;
-  height: 48px;
-  border: 1px solid black;
-  box-sizing: border-box;
-}
-
-.row {
   display: flex;
+  width: 38px;
+  height: 38px;
+  border: 1px solid red;
 }
 
 .columns:hover {

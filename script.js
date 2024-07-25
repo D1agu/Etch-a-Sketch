@@ -1,25 +1,27 @@
 const containerDiv = document.querySelector('.container');
 const btnGenerate = document.querySelector('.btn-gen');
 
-function createDivSquare() {
+function createDivSquare(rows) {
+    const grid = rows * rows;
     let html = '';
-    for (let i = 0; i < 256; i++) { // 16x16 = 256
+    for (let i = 0; i < grid; i++) {
         html += '<div class="columns"></div>';
     }
     containerDiv.innerHTML = html;
+    containerDiv.style.width = (rows * 40) + 'px';
+    const columnsChild = document.querySelectorAll('.columns');
+    for (let i = 0; i < columnsChild.length; i++) {
+        const childEl = columnsChild[i];
+        childEl.style.flex = `1 0 ${100 / rows}%`;
+
+    }
+
 }
 
-createDivSquare();
+createDivSquare(16);
 
 btnGenerate.addEventListener('click', () => {
     const rowNumsByUser = prompt('Please, enter number of rows');
-    const grid = rowNumsByUser * rowNumsByUser;
-    function createDivSquare(rows) {
-        let html = '';
-        for (let i = 0; i < rows; i++) { // 16x16 = 256
-            html += '<div class="columns"></div>';
-        }
-        containerDiv.innerHTML = html;
-    }
-    createDivSquare(grid);
+    createDivSquare(rowNumsByUser);
 });
+
