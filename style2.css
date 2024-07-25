@@ -1,19 +1,50 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   display: flex;
+  align-items: center;
   flex-wrap: wrap; /* Zapewnia, że elementy będą łamać się na nową linię */
-  width: calc(16 * 16px + 15 * 2px);
-  height: calc(16 * 16px + 15 * 2px);
+  max-width: calc(48 * 16px + 15 * 2px);
+  max-height: calc(48 * 16px + 15 * 2px);
   border: 1px solid red;
   gap: 2px;
+  padding: 4px;
 }
 
 .columns {
-  width: 16px;
-  height: 16px;
+  width: 48px;
+  height: 48px;
   border: 1px solid black;
   box-sizing: border-box;
 }
 
 .row {
   display: flex;
+}
+
+.columns:hover {
+  background: red;
+}
+
+.btn-gen {
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 8px;
+  margin-top: 16px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
 }
